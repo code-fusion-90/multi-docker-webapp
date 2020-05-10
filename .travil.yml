@@ -22,4 +22,16 @@ after_sucess:
     - docker push local/multi-server
     - docker push local/multi-worker
 
+deploy:
+    provider: elasticbeanstalk
+    region: ''
+    app: ''
+    env: ''
+    bucket_name: ''
+    bucket_path: ''
+    on:
+        branch: master
+    access_key_id: $$
+    secret_access_key:
+        secure: $$
     
